@@ -748,7 +748,7 @@ body {
                 align-items: flex-start; } }
   .content__timetable {
     overflow: hidden; }
-  .content__timetable_name {
+  .content__header_name {
     font-size: 2em;
     font-weight: 100;
     color: #36434a;
@@ -756,34 +756,67 @@ body {
     height: 100%;
     padding-top: 40px; }
     @media screen and (max-width: 996px) {
-      .content__timetable_name {
+      .content__header_name {
         padding: 0;
         font-size: 1.3em; } }
-  .content__timetable_controls {
+  .content__header_controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-right: 50px; }
     @media screen and (max-width: 996px) {
-      .content__timetable_controls {
+      .content__header_controls {
         width: 100%;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
         margin-right: 0;
         padding-top: 20px; } }
-    .content__timetable_controls i {
-      font-size: 1.3em;
+  .content__header_user_row {
+    margin-bottom: 20px;
+    font-size: 14px; }
+    @media screen and (max-width: 996px) {
+      .content__header_user_row {
+        margin-bottom: 0;
+        display: none; } }
+    .content__header_user_row a:hover {
+      cursor: pointer;
+      color: black; }
+    .content__header_user_row i {
+      font-size: 16px;
       margin: 0 10px; }
-      @media screen and (max-width: 996px) {
-        .content__timetable_controls i {
-          margin: 5px; } }
-      .content__timetable_controls i:hover {
-        cursor: pointer;
-        color: black; }
+      .content__header_user_row i:last-of-type {
+        margin-right: 0; }
+  @media screen and (max-width: 996px) {
+    .content__header_controls_row {
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; } }
+  .content__header_controls_row i {
+    font-size: 1.3em;
+    margin: 0 10px; }
+    .content__header_controls_row i:last-of-type {
+      margin-right: 0; }
+    @media screen and (max-width: 996px) {
+      .content__header_controls_row i {
+        margin: 5px; } }
+    .content__header_controls_row i:hover {
+      cursor: pointer;
+      color: black; }
 
 .timetable {
   display: -webkit-box;
