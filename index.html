@@ -1,0 +1,247 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+
+    <!--[if lt IE 9]>
+        <script src="assets/js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="main_wraper">
+        <div class="overlay" id="overlay"></div>
+        <div class="sidebar">
+            <div class="sidebar__visible">
+                <img class="sidebar__logo" id="logo" src="./assets/img/logo.svg" alt="">
+                <ul class="sidebar__elements">
+                    <li class="sidebar__element">
+                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar__container">
+                <button class="sidebar__close" id="sidebar__close"><i class="fa fa-times" aria-hidden="true"></i></button>
+                <div class="sidebar__block">
+                    <h3 class="sidebar__block_title">Predmety a hodiny</h3>
+                    <div class="sidebar__block_input">
+                        <input type="text" placeholder="(názov/kód predmetu, učiteľ, miestnosť)">
+                        <button>Hľadaj</button>
+                    </div>
+                </div>
+                <div class="sidebar__block">
+                    <h3 class="sidebar__block_title">Rozvrhy pre učiteľov</h3>
+                    <div class="sidebar__block_input">
+                        <input type="text" placeholder="(meno a/alebo priezvisko učiteľa)">
+                        <button>Hľadaj</button>
+                    </div>
+                </div>
+                <div class="sidebar__block">
+                    <h3 class="sidebar__block_title">Rozvrhy pre miestnosti</h3>
+                    <div class="sidebar__block_input">
+                        <input type="text" placeholder="(názov miestnosti)">
+                        <button>Hľadaj</button>
+                    </div>
+                </div>
+                <div class="sidebar__block">
+                    <h3 class="sidebar__block_title">Rozvrhy pre krúžky</h3>
+                    <div class="sidebar__block_input">
+                        <input type="text" placeholder="(názov krúžku)">
+                        <button>Hľadaj</button>
+                    </div>
+                </div>
+                <div class="sidebar__block">
+                    <h3 class="sidebar__block_title">Nástroje</h3>
+                    <div class="sidebar__block_input">
+                        <ul>
+                            <li>Vyhľadávanie voľných miestností</li>
+                            <li>Vyhľadávanie hodín podľa času</li>
+                            <li>Aktuálne prebiehajúca výučba</li>
+                            <li>Aktuálne voľné miestnosti</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content__header">
+                <div class="content__timetable_name">
+                    <p>Rozvrh kruzku 2AIN2</p>
+                </div>
+                <div class="content__timetable_controls">
+                    <i class="fa fa-share-alt" aria-hidden="true"></i>
+                    <i class="fa fa-floppy-o" aria-hidden="true"></i>
+                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                    <i class="fa fa-print" aria-hidden="true"></i>
+                    <i class="fa fa-files-o" aria-hidden="true"></i>
+                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                    <i class="fa fa-sign-out" aria-hidden="true"></i>
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="content__timetable">
+                <div class="timetable__days" id="timetable__days">
+                    <div class="timetable__day">Pondelok</div>
+                    <div class="timetable__day">Utorok</div>
+                    <div class="timetable__day">Streda</div>
+                    <div class="timetable__day">Stvrtok</div>
+                    <div class="timetable__day">Piatok</div>
+                </div>
+                <div class="timetable">
+                    <div class="timetable__current_time"></div>
+                    <div class="timetable__collum timetable__collum--times">
+                        <div class="timetable__cell">08:10</div>
+                        <div class="timetable__cell">09:00</div>
+                        <div class="timetable__cell">09:50</div>
+                        <div class="timetable__cell">10:40</div>
+                        <div class="timetable__cell">11:30</div>
+                        <div class="timetable__cell">12:20</div>
+                        <div class="timetable__cell">13:10</div>
+                        <div class="timetable__cell">14:00</div>
+                        <div class="timetable__cell">14:50</div>
+                        <div class="timetable__cell">15:40</div>
+                        <div class="timetable__cell">16:30</div>
+                        <div class="timetable__cell">17:20</div>
+                        <div class="timetable__cell">18:10</div>
+                        <div class="timetable__cell">19:00</div>
+                    </div>
+                    <div class="timetable__collum">
+                        <div class="lecture_container lecture_container--offset-3 lecture_container--size-2">
+                            <div class="lecture_container__lecture lecture_container__lecture--color-blue">
+                                <p class="lecture_container__lecture_room">B</p>
+                                <p class="lecture_container__lecture_name">Programovanie (3)</p>
+                            </div>
+                        </div>
+                        <div class="lecture_container lecture_container lecture_container--size-2">
+                            <div class="lecture_container__lecture lecture_container__lecture--color-blue">
+                                <p class="lecture_container__lecture_room">B</p>
+                                <p class="lecture_container__lecture_name">Algoritmy a dátové štruktúry</p>
+                            </div>
+                        </div>
+                        <div class="lecture_container lecture_container--offset-3 lecture_container--size-1 lecture_container--color-purple">
+                            <div class="lecture_container__lecture lecture_container__lecture--color-purple">
+                                <p class="lecture_container__lecture_room">B</p>
+                                <p class="lecture_container__lecture_name">Algoritmy a dátové štruktúry</p>
+                            </div>
+                        </div>
+                        <div class="lecture_container lecture_container lecture_container--size-2">
+                            <div class="lecture_container__lecture lecture_container__lecture--color-red">
+                                <p class="lecture_container__lecture_room">B</p>
+                                <p class="lecture_container__lecture_name">Princípy počítačov - operačné systémy <br>skupiny sa striedajú</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timetable__collum">
+                        <div class="lecture_container lecture_container--offset-6 lecture_container--size-2">
+                            <div class="lecture_container__lecture lecture_container__lecture--color-blue">
+                                <p class="lecture_container__lecture_room">B</p>
+                                <p class="lecture_container__lecture_name">Algoritmy a dátové štruktúry</p>
+                            </div>
+                        </div>
+                        <div class="lecture_container lecture_container--size-2">
+                            <div class="lecture_container__lecture lecture_container__lecture--color-blue">
+                                <p class="lecture_container__lecture_room">B</p>
+                                <p class="lecture_container__lecture_name">Algoritmy a dátové štruktúry</p>
+                            </div>
+                        </div>
+                        <div class="lecture_container lecture_container--size-2">
+                            <div class="lecture_container__lecture lecture_container__lecture--color-blue">
+                                <p class="lecture_container__lecture_room">B</p>
+                                <p class="lecture_container__lecture_name">Algoritmy a dátové štruktúry</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timetable__collum">
+                        <div class="lecture_container lecture_container--offset-2 lecture_container--size-2">
+                            <div class="lecture_container__lecture lecture_container__lecture--color-red">
+                                <p class="lecture_container__lecture_room">B</p>
+                                <p class="lecture_container__lecture_name">Algoritmy a dátové štruktúry</p>
+                            </div>
+                            <div class="lecture_container__lecture lecture_container__lecture--color-blue">
+                                <p class="lecture_container__lecture_room">B</p>
+                                <p class="lecture_container__lecture_name">Algoritmy a dátové štruktúry</p>
+                            </div>
+                            <div class="lecture_container__lecture lecture_container__lecture--color-orange">
+                                <p class="lecture_container__lecture_room">B</p>
+                                <p class="lecture_container__lecture_name">Algoritmy a dátové štruktúry</p>
+                            </div>
+                        </div>
+                        <div class="lecture_container lecture_container--size-2">
+                            <div class="lecture_container__lecture lecture_container__lecture--color-red">
+                                <p class="lecture_container__lecture_room">B</p>
+                                <p class="lecture_container__lecture_name">Algoritmy a dátové štruktúry</p>
+                            </div>
+                        </div>
+                        <div class="lecture_container lecture_container--offset-2 lecture_container--size-2 lecture_container--color-orange">
+                            <div class="lecture_container__lecture lecture_container__lecture--color-red">
+                                <p class="lecture_container__lecture_room">B</p>
+                                <p class="lecture_container__lecture_name">Algoritmy a dátové štruktúry</p>
+                            </div>
+                            <div class="lecture_container__lecture lecture_container__lecture--color-red">
+                                <p class="lecture_container__lecture_room">B</p>
+                                <p class="lecture_container__lecture_name">Algoritmy a dátové štruktúry</p>
+                            </div>
+                        </div>
+                        <div class="lecture_container lecture_container--size-2">
+                            <div class="lecture_container__lecture lecture_container__lecture--color-red">
+                                <p class="lecture_container__lecture_room">B</p>
+                                <p class="lecture_container__lecture_name">Algoritmy a dátové štruktúry</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timetable__collum">
+                        <div class="lecture_container lecture_container--offset-4 lecture_container--size-2">
+                            <div class="lecture_container__lecture lecture_container__lecture--color-red">
+                                <p class="lecture_container__lecture_room">B</p>
+                                <p class="lecture_container__lecture_name">Algoritmy a dátové štruktúry</p>
+                            </div>
+                        </div>
+                        <div class="lecture_container lecture_container--size-2">
+                            <div class="lecture_container__lecture lecture_container__lecture--color-red">
+                                <p class="lecture_container__lecture_room">B</p>
+                                <p class="lecture_container__lecture_name">Algoritmy a dátové štruktúry</p>
+                            </div>
+                        </div>
+                        <div class="lecture_container lecture_container--size-2">
+                            <div class="lecture_container__lecture lecture_container__lecture--color-red">
+                                <p class="lecture_container__lecture_room">B</p>
+                                <p class="lecture_container__lecture_name">Algoritmy a dátové štruktúry</p>
+                            </div>
+                        </div>
+                        <div class="lecture_container lecture_container--size-2 lecture_container--color-orange">
+                            <div class="lecture_container__lecture lecture_container__lecture--color-red">
+                                <p class="lecture_container__lecture_room">B</p>
+                                <p class="lecture_container__lecture_name">Algoritmy a dátové štruktúry</p>
+                            </div>
+                        </div>
+                        <div class="lecture_container lecture_container--size-2">
+                            <div class="lecture_container__lecture lecture_container__lecture--color-red">
+                                <p class="lecture_container__lecture_room">B</p>
+                                <p class="lecture_container__lecture_name">Algoritmy a dátové štruktúry</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timetable__collum">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/vendor/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/vendor/sticky-kit.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
