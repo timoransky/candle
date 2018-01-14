@@ -618,9 +618,10 @@ body {
     border: none;
     padding: 0;
     margin: 0;
+    outline: none;
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 30px;
+    right: 30px;
     font-size: 1.5em;
     color: rgba(255, 255, 255, 0.9);
     cursor: pointer;
@@ -662,12 +663,22 @@ body {
         border: none;
         padding: 5px;
         border-bottom: 1px solid #f9f9f9;
-        font-size: 16px; }
+        font-size: 14px;
+        font-family: 'Open Sans', sans-serif; }
         @media screen and (max-width: 996px) {
           .sidebar__block_input input, .sidebar__block_input button {
             font-size: 14px; } }
       .sidebar__block_input input {
-        width: 80%; }
+        width: 80%;
+        outline: none; }
+        .sidebar__block_input input::-webkit-input-placeholder {
+          font-weight: 300; }
+        .sidebar__block_input input:-ms-input-placeholder {
+          font-weight: 300; }
+        .sidebar__block_input input::-ms-input-placeholder {
+          font-weight: 300; }
+        .sidebar__block_input input::placeholder {
+          font-weight: 300; }
         @media screen and (max-width: 996px) {
           .sidebar__block_input input {
             width: 75%; } }
@@ -688,7 +699,7 @@ body {
         padding-left: 10px;
         list-style-position: inside;
         padding-bottom: 30px;
-        font-size: 16px; }
+        font-size: 14px; }
         @media screen and (max-width: 996px) {
           .sidebar__block_input ul {
             font-size: 14px; } }
@@ -804,7 +815,10 @@ body {
     -webkit-transition: all ease-in-out .25s;
     -o-transition: all ease-in-out .25s;
     transition: all ease-in-out .25s;
-    opacity: 0.6; }
+    opacity: 0.8; }
+    @media screen and (max-width: 996px) {
+      .timetable__current_time {
+        width: calc(160px * 5 + 50px); } }
   .timetable__days {
     display: -webkit-box;
     display: -ms-flexbox;
