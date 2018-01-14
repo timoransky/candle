@@ -13,7 +13,10 @@ $text: #555f61;
     background-color: #fbb841;
 }
 %purple {
-    background-color: #d702ec;;
+    background-color: #d702ec;
+}
+%grey {
+    background-color: grey;
 }
 @mixin set-color($color) {
     @extend %#{$color};

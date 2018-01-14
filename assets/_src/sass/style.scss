@@ -224,6 +224,10 @@ body {
 		color: white;
 		margin-bottom: 30px;
 
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+
 		&_title {
 			font-size: 18px;
 			font-weight: 400;
@@ -265,6 +269,7 @@ body {
 
 				&::placeholder {
 					font-weight: 300;
+					color: #ebebeb;
 				}
 
 				@media screen and (max-width: 996px) {
@@ -342,12 +347,16 @@ body {
 	}
 
 	&__header_name {
-		font-size: 2em;
-		font-weight: 100;
 		color: #36434a;
 		display: block;
 		height: 100%;
 		padding-top: 40px;
+
+		h1 {
+			font-size: 2em;
+			font-weight: 100;
+			margin: 0;
+		}
 
 		@media screen and (max-width: 996px) {
 			padding: 0;
@@ -402,6 +411,7 @@ body {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+			max-width: 500px;
 		}
 
 		i {
@@ -636,7 +646,7 @@ body {
 			line-height: 19px;
 		}
 
-		$list: red blue orange purple;
+		$list: red blue orange purple grey;
 
 		@each $color in $list {
 			&--color-#{$color} {
@@ -656,6 +666,9 @@ body {
 					}
 					@if $color == purple {
 						content: "S"
+					}
+					@if $color == grey {
+						content: "N"
 					}
 					@include set-color(#{$color});
 				}

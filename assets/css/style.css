@@ -421,6 +421,9 @@ img {
 .lecture_container__lecture--color-purple::before, .lecture_container__lecture--color-purple::after {
   background-color: #d702ec; }
 
+.lecture_container__lecture--color-grey::before, .lecture_container__lecture--color-grey::after {
+  background-color: grey; }
+
 body {
   font-family: 'Open Sans', sans-serif;
   color: #555f61; }
@@ -635,6 +638,8 @@ body {
     width: 100%;
     color: white;
     margin-bottom: 30px; }
+    .sidebar__block:last-of-type {
+      margin-bottom: 0; }
     .sidebar__block_title {
       font-size: 18px;
       font-weight: 400;
@@ -672,13 +677,17 @@ body {
         width: 80%;
         outline: none; }
         .sidebar__block_input input::-webkit-input-placeholder {
-          font-weight: 300; }
+          font-weight: 300;
+          color: #ebebeb; }
         .sidebar__block_input input:-ms-input-placeholder {
-          font-weight: 300; }
+          font-weight: 300;
+          color: #ebebeb; }
         .sidebar__block_input input::-ms-input-placeholder {
-          font-weight: 300; }
+          font-weight: 300;
+          color: #ebebeb; }
         .sidebar__block_input input::placeholder {
-          font-weight: 300; }
+          font-weight: 300;
+          color: #ebebeb; }
         @media screen and (max-width: 996px) {
           .sidebar__block_input input {
             width: 75%; } }
@@ -749,12 +758,14 @@ body {
   .content__timetable {
     overflow: hidden; }
   .content__header_name {
-    font-size: 2em;
-    font-weight: 100;
     color: #36434a;
     display: block;
     height: 100%;
     padding-top: 40px; }
+    .content__header_name h1 {
+      font-size: 2em;
+      font-weight: 100;
+      margin: 0; }
     @media screen and (max-width: 996px) {
       .content__header_name {
         padding: 0;
@@ -805,7 +816,8 @@ body {
               justify-content: space-between;
       -webkit-box-align: center;
           -ms-flex-align: center;
-              align-items: center; } }
+              align-items: center;
+      max-width: 500px; } }
   .content__header_controls_row i {
     font-size: 1.3em;
     margin: 0 10px; }
@@ -1068,6 +1080,8 @@ body {
       content: "K"; }
     .lecture_container__lecture--color-purple::after {
       content: "S"; }
+    .lecture_container__lecture--color-grey::after {
+      content: "N"; }
     .lecture_container__lecture--absolute {
       position: absolute;
       top: 2px;
